@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Edilson Nhanenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+      section {
+            display: none;
+        }
+
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #btnTopo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+        }
+
+        #btnHome {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+   </style>
+</head>
+
+
+<body>
+    <header>
+        <h1>  Edilson Célia Nhanenge </h1>
+        <img src="perfil1.png" alt="Foto de Edilson Nhanenge" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
+        <p>  <strong>Consultor em Geoinformação e Engenheiro Geomático </strong> </p>
+        
+        <nav>
+            <button onclick="mostrarSecao('sobre')">Sobre Mim</button>
+            <button onclick="mostrarSecao('experiencia')">Experiência Profissional</button>
+            <button onclick="mostrarSecao('projectos')">Projectos</button>
+            <button onclick="mostrarSecao('formacao')">Formação e Certificações</button>
+            <button onclick="mostrarSecao('contacto')">Contacto</button>
+        </nav>
+
+    </header>
+<!-- Botão Home -->
+<button id="btnHome" onclick="mostrarHome()">🏠 Home</button>
+    
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <div class="perfil-detalhes">
+            <img src="Perfil2.jpg" alt="Foto de Edilson Nhanenge" style="width:85%; max-width: 450px;">
+            <p style="text-align: justify; margin: 2px; padding: 10px;" >
+         Consultor em Geoinformação, com vasta experiência em Sistemas de Informação Geográfica (SIG), análise geoespacial, mapeamento, cadastro de terras, conservação ambiental e levantamento topográfico. </p> 
+         <p style="text-align: justify; margin: 2px; padding: 10px;" >
+         Minha expertise inclui áreas como Hidrografia e Fotogrametria. Possuo domínio avançado em ferramentas de geoprocessamento, como QGIS, ArcGIS Pro e Google Earth. Além disso, sou proficiente no uso de ferramentas para coleta e análise de dados, como Kobo Toolbox, Microsoft Excel e R-Studio. </p>
+         <p style="text-align: justify; margin: 2px; padding: 10px;" >
+         Tenho actuado em projectos governamentais, investigativos e comunitários, contribuindo para o desenvolvimento sustentável por meio da Geoinformação.  </p>
+         <p style="text-align: justify; margin: 2px; padding: 10px;" >
+         Sou apaixonado pela conservação da biodiversidade, pelo desenvolvimento sustentável e pela inovação tecnológica. Aliado a habilidades de liderança, coordenação, trabalho em equipe e sensibilização, mantenho-me comprometido com o aprendizado contínuo. </p>
+        </div>
+    </section>
+
+    <section id="experiencia">
+        <h2>Experiência Profissional</h2>
+        <div class="experiencia">
+          <h3> Topográfico na Metop Lda, no âmbito do Projecto MozLand (Terra Segura)</h3>
+          <h4>Registo e Regularização de terras (RDUAT) - distrito de Zavala, Inhambane </h4>
+           <p> <strong> Descrição: </strong> Levantamento topográfico de mais de 2000 parcelas para cadastro de terras comunitárias. </p>
+           <p> Sensibilização de comunidades sobre gestão sustentável de recursos, garantido o alinhamento com os objectivos do projecto RDUAT. </p>
+           <p><strong> Ferramentas Utilizadas:</strong> QGIS, receptores de GNSS e KoboToolbox. </p>
+           <p><strong> Resultados:</strong> Este trabalho resultou na atribuição de mais de 2000 títulos de Direito de Uso e Aproveitamento de Terras (DUAT). </p>
+           <img src="Perfil3.jpg" alt="Foto de Edilson Nhanenge" style="width:85%; max-width: 450px;">
+        </div>
+        <div class="experiencia">
+            <h3>Analista de GIS no consórcio Etop-Metop </h3>
+            <h4>Delimitação Comunitária - DELCOM (MozLand) - nas províncias de Manica e Sofala </h4>
+            <p><strong> Descrição:</strong> Como Analista de GIS, realizei o mapeamento de mais de 30 comunidades nas províncias de Manica e Sofala. Este trabalho envolveu levantamento de dados de campo, processamento de informações geoespaciais e criação de mapas temáticos. </p>
+            <p><strong> Ferramentas Utilizadas:</strong> ArcGIS Pro, QGIS, GPS de alta precisão, Estação Total. </p>
+            <p><strong>Resultados:</strong>  Mapas detalhados que subsidiaram planos comunitários de gestão de recursos e desenvolvimento sustentável. E relatórios e Agendas de Desenvolvimento Comunitária. </p>
+        </div>
+    </section>
+
+    <section id="projectos">
+        <h2>Projectos</h2>
+        <div class="projeto">
+            <h3>Mapa da Hidrografia de Moçambique</h3>
+            <p>Por ocasião do dia Internacional dos SIG (GISDay_2024) que é celebrado na segunda semana de Novembro, decide realizar uma análise detalhada da distribuição hidrográfica em Moçambique.</p>
+            <p>Nste mapa da hidrografia de Moçambique as hierarquias dos rios são representadas em detalhes.</p>
+            <img src="Hidrografia de Moçambique.png" alt="Mapa da Hidrografia" style="width: 100%; max-width: 600px;">
+            <a href="Hidrografia de Moçambique.pdf" target="_blank">Baixar Documento</a>
+        </div>
+        <div class="projeto">
+            <h3>Índice de Vegetação por Diferença Normalizada (NDVI) da província do Niassa</h3>
+            <h4>Estudo sobre a perda de cobertura florestal na província de Niassa </h4>
+            <p>Este projecto avalia as mudanças na cobertura vegetal da província de Niassa entre os anos 2012 e 2024, utlizando o Índice de Vegetação por Diferença Normalizada.</p>
+            <p>Os dados analisados, fornecidos pelo U.S Geological Survey (USGS), revelam áreas de perda significativa de Vegetação, provavelmente associadas a actividades humanas e mudanças climáticas, mas também áreas de recuperação vegetal, evidenciando esforços de conservação e regeneração.</p>
+            <p>Um ponto de destaque é a Reserva Especial do Niassa, que, embora possui importantes ecossistemas, também foi afectada por perdas de Vegetação em algumas áreas, reforçando a necessidade de fortalecer as estratégias de conservação para mitigar os impactos e garantir a preservação deste patrimônio natural.</p>
+            <p>Os mapas e gráficos apresentados permitem uma visão integrada das mudanças ambientais, destacando a importância dos SIG no monitoramento de recursos naturais e no suporte à tomada de decisão sustentável.</p>
+            <img src="Niassa_NDVI.png" alt="NDVI" style="width: 100%; max-width: 600px;">
+            <a href="NDVI_Niassa.pdf" target="_blank">Baixar Documento</a>
+        </div>
+        <div class="projeto">
+            <h3>Cartografia aplicada na análise Geopolitica </h3>
+            <h4>Análise da Alienção Eleitoral em Moçambique: 1994-2019 </h4>
+            <p>Através da Cartografia e dos Sistemas de Informação Geográfica (SIG), foi possível visualizar padrões de <b>abstenção</b>, <b>voto brancos</b> e <b>votos nulos</b> ao longo do tempo nas diversas províncias de Moçambique. </p>
+            <p>Este trabalho evidencia como a alienção eleitoral, caracterizada pela falta de envolvimento dos eleitores, pode ser monitorada e compreendida através do uso de tecnologias de geoprocessamento e mapas temáticos. </p>
+            <img src="Alienção eleitoral.png" alt="Mapa de Desflorestamento" style="width: 100%; max-width: 600px;">
+            <a href="Alienação eleitoral.pdf" target="_blank">Baixar Documento</a>
+        </div>
+        <div class="projeto">
+            <h3>Monitoramento da Cólera em Moçambique com o auxílio dos SIG</h3>
+            <p>Este mapa apresenta a distribuição espacial dos casos de cólera e óbitos notificados em Moçambique entre 1º de Outubro de 2023 e 14 de Julho de 2024.</p>
+            <p>Os Sistemas de Informação Geográfica (SIG) desempenham um papel fundamental na criação de ferramentas como esta, que nos permitem visualizar, analisar e compreender a gravidade e a disseminação da doença em diferentes regiões do país.</p>
+            <p>Através dos SIG, podemos identificar padrões críticos e direcionar de maneira eficaz os esforços e recursos para as áreas mais afectadas.</p>
+            <p>Agradecemos a todos os profissionais de saúde e não só por seu trabalho contínuo e essencial no enfrentamento desse desafio de saúde pública.</p>
+            <img src="Colera_dados.jpg" alt="Mapa de Desflorestamento" style="width: 100%; max-width: 600px;">
+            <a href="colera.pdf" target="_blank">Baixar Documento</a>
+        </div>
+        <div class="projeto">
+            <h3>Mapa Hipsométrico da Cordilheira de Chimanimani</h3>
+            <p>A Cordilheira de Chimanimani é uma região montanhosa de importância ambiental e geográfica que se estende entre Moçambique e Zimbábue.</p>
+            <p>Este mapa foi produzido utlizando dados de Modelo Digital de Elevação (MDE) e técnicas de geoprocessamento no QGIS. Este trabalho destaca a complexidade topográfica da Cordilheira, capturando as variações de altitude em detalhes impressionantes. </p>
+            <img src="Chimanimani.png" alt="Mapa de Desflorestamento" style="width: 100%; max-width: 600px;">
+            <a href="Chimanimane final.pdf" target="_blank">Baixar Documento</a>
+        </div>
+        <div class="projeto">
+            <h3>Índice de Percepção da Corrupação no continete Africano - 2024 </h3>
+            <p>A corrupção continua sendo um dos maiores desafios para o desenvolvimento sustentável no continete Africano. Utilizando dados da Transparência Internacional, elaborei este mapa que representa a percepção da corrupção em África em 2024. </p>
+            <p>O mapa é uma ferramenta valiosa para analisar padrões regionais e apoiar estratégias de mitigação da corrupção. </p>
+            <img src="Africa_IPC_2024.png" alt="Mapa de Desflorestamento" style="width: 100%; max-width: 600px;">
+            <a href="Africa_IPC_2024.pdf" target="_blank">Baixar Documento</a>
+        </div>
+        <div class="projeto">
+            <h3>Primeira aventura em R</h3>
+            <h4>Abstenção eleitoral em linguagem R </h4>
+            <p> </p>
+            <p>O script usado na elaboração deste mapa pode ser visualizado na minha pagina do Github através do link:<a href="https://gist.github.com/Nhanenge/47a8be244d0ded0d8f42732db74f43fb"> https://gist.github.com/Nhanenge/47a8be244d0ded0d8f42732db74f43fb </a> </p>
+            <img src="Mapa_Abstencao_Eleitoral.png" alt="Mapa de Desflorestamento" style="width: 100%; max-width: 600px;">
+            <a href="Mapa_Abstencao_Eleitoral.png" target="_blank">Baixar Documento</a>
+        </div>
+        <div class="projeto">
+            <h3>Uso e cobertura do Solo em linguagem R</h3>
+            <h4>Uso e cobertura do distrito de Memba, Nampula </h4>
+            <p>O segundo mapa produzido em R, destaca a dinâmica de uso e cobertura do solo no distrito de Memba. </p>
+            <p>Este trabalho foi realizado com os dados do <b> European Space Agency - ESA_WorldCover (2021) </b>, uma fonte indispensável para análises espaciais, que permite compreender e monitorar as mudanças no uso da terra em escala global. </p>
+            <p>O script usado na elaboração deste mapa pode ser visualizado na minha pagina do Github através do link: <a href="https://gist.github.com/Nhanenge/708ac3fcd151e5f94318f07831e7a6a3"> https://gist.github.com/Nhanenge/708ac3fcd151e5f94318f07831e7a6a3 </a> </p>
+            <img src="mapa_uso_cobertura_solo_memba.png" alt="Mapa de Desflorestamento" style="width: 100%; max-width: 800px;">
+            <a href="mapa_uso_cobertura_solo_memba.png" target="_blank">Baixar Documento</a>
+        </div>
+    </section>
+
+    <section id="formacao">
+        <h2>Formação e Certificações</h2>
+     <div class="formacao">
+        <h3>Formação </h3>
+        <p>Licenciatura em <strong>Ciências de Informação Geográfica (2024)</strong> </p>
+        <p>Universidade Eduardo Mondlane </p>
+
+    </div>
+
+    <div>
+     <h3>Certificações </h3>
+     <ul>
+      <li> Curso de Análise de Dados em R. (2024) </li>
+      <li> Curso Avançado de Microsoft Excel . (2024) </li>
+    </ul>
+
+   </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Entre em contacto pelos números:</p>
+        <ul>
+            <li>📞 <strong>Telefone 1:</strong> +258 84 449 3422</li>
+            <li>📞 <strong>Telefone 2:</strong> +258 87 070 2428</li>
+            <li> <strong>E-mail:</strong> edilsonaustin@gmail.com</li>
+        </ul>
+        <div class="contato-links">
+            <a href="https://wa.me/258844493422" target="_blank">
+                <img src="whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="https://t.me/258870702428" target="_blank">
+                <img src="Telegram.png" alt="Telegram">
+            </a>
+            <a href="https://www.linkedin.com/in/edilson-nhanenge-048b85193" target="_blank">
+                <img src="likendin.png" alt="LinkedIn">
+            </a>
+        </div>
+        <p><a href="mailto:edilsonaustin@gmail.com" class="email-button">
+            <img src="email.png" alt="Vamos conversar">
+        </a></p>
+    </section>
+
+    <!-- Botão para voltar ao topo -->
+    <button id="btnTopo" onclick="voltarAoTopo()">▲ Topo</button>
+   
+    <footer>
+        <p>&copy; 2025 Edilson Nhanenge. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let secoes = document.querySelectorAll("section");
+            secoes.forEach(s => s.style.display = "none");
+    
+            // Função para exibir apenas a seção clicada
+            window.mostrarSecao = function(secao) {
+                secoes.forEach(s => s.style.display = "none");
+                document.getElementById(secao).style.display = "block";
+            };
+    
+            // Função para voltar à tela inicial
+            window.mostrarHome = function() {
+                secoes.forEach(s => s.style.display = "none");
+            };
+        });
+    
+        // Mostrar botão "Voltar ao Topo" ao rolar a página
+        window.onscroll = function() {
+            let btnTopo = document.getElementById("btnTopo");
+            if (document.documentElement.scrollTop > 200) {
+                btnTopo.style.display = "block";
+            } else {
+                btnTopo.style.display = "none";
+            }
+        };
+    
+        // Função para voltar ao topo
+        function voltarAoTopo() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    
+</body>
+</html>
