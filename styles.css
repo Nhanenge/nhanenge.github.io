@@ -78,6 +78,19 @@ a {
     text-decoration: none;
 }
 
+.contato-links{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.contato-links img {
+    width: 40px;
+    height: auto;
+}
+
+
 footer {
     text-align: center;
     padding: 20px;
