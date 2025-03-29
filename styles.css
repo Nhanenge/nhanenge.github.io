@@ -98,3 +98,123 @@ footer {
     color: #ecf0f1;
     margin-top: 20px;
 }
+
+/* Estilos padrão (modo claro) */
+body {
+    background-color: white;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Ajustar o fundo do cabeçalho no modo escuro */
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+/* Ajustar projetos no modo escuro */
+body.dark-mode .projeto {
+    background-color: #2c2c2c;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Ajustar os links para melhor visibilidade no modo escuro */
+body.dark-mode a {
+    color: #4da8da;
+}
+
+/* Ajustar ícones de contato */
+body.dark-mode .contato-links img {
+    filter: invert(1); /* Inverte a cor dos ícones para se adaptarem ao modo escuro */
+}
+
+#toggleTheme {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#toggleTheme:hover {
+    background-color: #555;
+}
+
+.dark-mode .projeto {
+    background-color: #222 !important;
+    color: white !important;
+}
+
+.dark-mode .descricao {
+    color: white !important;
+}
+
+/* Função do sistema de accordion */
+.accordion {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    background-color: #1f2a38;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    text-align: left;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #324a5f;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+.accordion-header {
+    margin-bottom: 5px;
+}
+
+/* Ajustando  descrição dos projectos */
+body {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+background-color: #121212;
+color: white;
+}
+
+body.dark-mode .accordion-content{
+    color: white;
+    background-color: #1e1e1e;
+}
+
