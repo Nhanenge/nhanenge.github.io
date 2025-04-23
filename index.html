@@ -54,7 +54,7 @@
   gtag('config', 'G-6RH7TTLKT0');
 </script>
       <!-- Link do CSS - Bootstrap (Necessário para o accordion funcionar corretamente) -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
 </head>
 
 
@@ -113,114 +113,146 @@
         </div>
     </section>
 
+<section id="projectos" class="container py-5">
+    <h2 class="mb-4">Projectos</h2>
+    <p class="mb-5">
+      Ciente de que a Cartografia, os Sistemas de Informação Geográfica e outras Ciências de Informação Geográfica desempenham um papel fundamental na análise geoespacial e na tomada de decisões estratégicas e precisas, contribuo para a solidificação desse campo com meu conhecimento e experiência.
+    </p>
+    <div class="accordion" id="accordionProjects"></div>
+    <div id="paginationControls" class="d-flex justify-content-center mt-4"></div>
+  </section>
 
-    <section id="projectos">
-        <h2> Projectos </h2>
-        <p>Ciente de que a Cartografia, os Sistemas de Informação Geográfica e outras Ciências de Informação Geográfica desempenham um papel fundamental na análise geoespacial e na tomada de decisões estratégicas e precisas, contribuo para a solidificação desse campo com meu conhecimento e experiência. </p>
-        <div class="container mt-4">
-            <h3> Lista de Projectos</h3>
-        </div>
-        
+  <script>
+    const projects = [
+      {
+        id: 1,
+        title: "Vias de transportes de Moçambique",
+        description: `<h3>Infraestruturas de Transportes em Moçambique</h3><h4>Um Desafio para a Conectividade</h4><p>A Estrada Nacional N1, principal eixo rodoviário que liga o Norte ao Sul de Moçambique, é uma herança da era colonial e nunca passou por uma reabilitação estrutural profunda.</p><p>A recente interrupção da N1 na província de Nampula reacende o debate sobre a urgência de infraestruturas resilientes.</p>`,
+        image: "Vias de transportes de Moçambique.png",
+        pdf: "Vias de transportes de Moçambique.pdf"
+      },
+      {
+        id: 2,
+        title: "Hidrografia de Moçambique",
+        description: `<h3>Mapa da Hidrografia de Moçambique</h3><p>Por ocasião do GISDay_2024, realizei uma análise detalhada da rede hidrográfica nacional com hierarquias dos rios em destaque.</p>`,
+        image: "Hidrografia de Moçambique.png",
+        pdf: "Mapa da Hidrografia.pdf"
+      },
+      {
+        id: 3,
+        title: "Divisão Administrativa de Moçambique",
+        description: `<h3>Mapa da Divisão Administrativa</h3><p>Mostra províncias, capitais provinciais e fronteiras internacionais. Ajuda a compreender a organização político-administrativa do país.</p>`,
+        image: "Moçambique.png",
+        pdf: "Moçambique.pdf"
+      },
+      {
+        id: 4,
+        title: "NDVI da Província do Niassa",
+        description: `<h3>Perda de Cobertura Vegetal</h3><p>Análise da vegetação com NDVI (2012–2024). Inclui impactos na Reserva Especial do Niassa.</p>`,
+        image: "Niassa_NDVI.png",
+        pdf: "NDVI_Niassa.pdf"
+      },
+      {
+        id: 5,
+        title: "Alienação Eleitoral em Moçambique",
+        description: `<h3>Cartografia Temática em Análise Sociopolítica</h3><p>Visualização da abstenção, votos brancos e nulos nas eleições de 1994–2019 usando SIG.</p>`,
+        image: "Alienção eleitoral.png",
+        pdf: "Alienação eleitoral.pdf"
+      },
+      {
+        id: 6,
+        title: "Monitoramento da Cólera com SIG",
+        description: `<h3>Cólera em Moçambique (2023–2024)</h3><p>Distribuição dos casos por província. O uso de SIG para análise espacial e resposta estratégica.</p>`,
+        image: "Colera_dados.jpg",
+        pdf: "colera.pdf"
+      },
+      {
+        id: 7,
+        title: "Aspectos Naturais de Moçambique",
+        description: `<h3>Topografia e Riqueza Natural</h3><p>Mapa com elevação (Copernicus DEM), rios (HydroSHEDS) e limites administrativos (GADM, CENACARTA).</p>`,
+        image: "Topografia.png",
+        pdf: "Topografia.pdf"
+      },
+      {
+        id: 8,
+        title: "Cordilheira de Chimanimani",
+        description: `<h3>Mapa Hipsométrico</h3><p>Região montanhosa entre Moçambique e Zimbábue representada com Modelo Digital de Elevação e QGIS.</p>`,
+        image: "Chimanimani.png",
+        pdf: "Chimanimane final.pdf"
+      },
+      {
+        id: 9,
+        title: "Corrupção no Continente Africano - 2024",
+        description: `<h3>Índice de Percepção da Corrupção</h3><p>Mapa com dados da Transparência Internacional sobre percepção da corrupção na África.</p>`,
+        image: "Africa_IPC_2024.png",
+        pdf: "Africa_IPC_2024.pdf"
+      },
+      {
+        id: 10,
+        title: "Abstenção Eleitoral em Linguagem R",
+        description: `<h3>Primeiro Projeto com R</h3><p>Script disponível no <a href='https://gist.github.com/Nhanenge/47a8be244d0ded0d8f42732db74f43fb' target='_blank'>GitHub</a>.</p>`,
+        image: "Mapa_Abstencao_Eleitoral.png",
+        pdf: "Mapa_Abstencao_Eleitoral.pdf"
+      },
+      {
+        id: 11,
+        title: "Uso e Cobertura do Solo em R",
+        description: `<h3>Estudo em Memba, Nampula</h3><p>Dados do ESA WorldCover (2021). <a href='https://gist.github.com/Nhanenge/708ac3fcd151e5f94318f07831e7a6a3' target='_blank'>Script no GitHub</a>.</p>`,
+        image: "mapa_uso_cobertura_solo_memba.png",
+        pdf: "mapa_uso_cobertura_solo_memba.pdf"
+      }
+    ];
 
-        <div id="accordionProjects" class="accordion"></div>
-            <div id="paginationControls" class="pagination"></div>
-            
-<script>
-            const projects = [
-    { id: 1, title: "Vias de transportes de Moçambique", description: " <h3> Infraestruturas de Transportes em Moçambique </h3> <h4> Um Desafio para a Conectividade </h4> A Estrada Nacional N1, principal eixo rodoviário que liga o Norte ao Sul de Moçambique, é uma herança da era colonial e nunca passou por uma reabilitação estrutural profunda. Como resultado, sua vulnerabilidade às intempéries e ao desgaste do tempo tornou-se um obstáculo crítico para o desenvolvimento económico e social do país. <p> A recente (Março de 2025) interrupção da N1 na província de Nampula, devido às chuvas, reacende o debate sobre a urgência de infraestruturas mais resilientes. Além disso, a inexistência de uma via alternativa em bom estado agrava os desafios logísticos. A rede ferroviária, por sua vez, não conecta todas as províncias, limitando ainda mais as opções de transporte. ",
-         image: "Vias de transportes de Moçambique.png", pdf: "Vias de transportes de Moçambique.pdf" },
+    const projectsPerPage = 8;
+    let currentPage = 1;
 
-    { id: 2, title: "Hidrografia de Moçambique", description: " <h3> Mapa da Hidrografia de Moçambique </h3>  Por ocasião do dia Internacional dos SIG (GISDay_2024) que é celebrado na segunda semana de Novembro, decide realizar uma análise detalhada da distribuição hidrográfica em Moçambique. <p> Neste mapa da hidrografia de Moçambique as hierarquias dos rios são representadas em detalhes.", 
-        image: "Hidrografia de Moçambique.png", pdf: "Mapa da Hidrografia.pdf" },
+    function renderProjects(page) {
+      const accordionContainer = document.getElementById("accordionProjects");
+      accordionContainer.innerHTML = "";
+      const start = (page - 1) * projectsPerPage;
+      const end = start + projectsPerPage;
+      const paginatedProjects = projects.slice(start, end);
 
-    { id: 3, title: " Divisão Administrativa de Moçambique ", description: " <h3>Mapa da Divisão Administrativa de Moçambique</h3> Este mapa ilustra a divisão Administrativa de Moçambique a nível macro (províncias), destacando as capitais provincias e fronteiras internacionais. <p> O objectivo do mapa é fornrcer uma visão clara da organização territorial do país e facilitar a compreensão espacial da sua estrutura político-administrativa. ", 
-        image: "Moçambique.png", pdf: "Moçambique.pdf" },
-
-    { id: 4, title: " Estudo sobre a perda de cobertura florestal na província de Niassa ", description: "  <h3>Índice de Vegetação por Diferença Normalizada (NDVI) da Província do Niassa</h3> <h4>Estudo sobre a perda de cobertura florestal na província de Niassa </h4> Este projecto avalia as mudanças na cobertura vegetal da província de Niassa entre os anos 2012 e 2024, utlizando o Índice de Vegetação por Diferença Normalizada. <p> Os dados analisados, fornecidos pelo U.S Geological Survey (USGS), revelam áreas de perda significativa de Vegetação, provavelmente associadas a actividades humanas e mudanças climáticas, mas também áreas de recuperação vegetal, evidenciando esforços de conservação e regeneração. <p> Um ponto de destaque é a Reserva Especial do Niassa, que, embora possui importantes ecossistemas, também foi afectada por perdas de Vegetação em algumas áreas, reforçando a necessidade de fortalecer as estratégias de conservação para mitigar os impactos e garantir a preservação deste patrimônio natural. <p> Os mapas e gráficos apresentados permitem uma visão integrada das mudanças ambientais, destacando a importância dos SIG no monitoramento de recursos naturais e no suporte à tomada de decisão sustentável. ", 
-        image: "Niassa_NDVI.png", pdf: "NDVI_Niassa.pdf" },
-
-    { id: 5, title: "Cartografia Temática aplicada em Análises de Sócio política", description: " <h3>Cartografia Temática aplicada na análise de Sócio política </h3> <h4>Análise da Alienação Eleitoral em Moçambique: 1994-2019 </h4> Através da Cartografia e dos Sistemas de Informação Geográfica (SIG), foi possível visualizar padrões de <b>abstenção</b>, <b>voto brancos</b> e <b>votos nulos</b> ao longo do tempo nas diversas províncias de Moçambique. <p> Este trabalho evidencia como a alienação eleitoral, caracterizada pela falta de envolvimento dos eleitores, pode ser monitorada e compreendida através do uso de tecnologias de geoprocessamento e mapas temáticos. ", 
-        image: "Alienção eleitoral.png", pdf: "Alienação eleitoral.pdf" },
-
-    { id: 6, title: " Cartografia Temática Aplicada na Saúde ", description: " <h3> Cartografia Temática Aplicada na Saúde</h3> <h4>Monitoramento da Cólera em Moçambique com o auxílio dos SIG</h4> Este mapa apresenta a distribuição espacial dos casos de cólera e óbitos notificados em Moçambique entre 1º de Outubro de 2023 e 14 de Julho de 2024. <p> Os Sistemas de Informação Geográfica (SIG) desempenham um papel fundamental na criação de ferramentas como esta, que nos permitem visualizar, analisar e compreender a gravidade e a disseminação da doença em diferentes regiões do país. <p> Através dos SIG, podemos identificar padrões críticos e direcionar de maneira eficaz os esforços e recursos para as áreas mais afectadas. ", 
-        image: "Colera_dados.jpg", pdf: "colera.pdf" },
-
-    { id: 7, title: " Aspectos Naturais de Moçambique ", description: " <h3> Aspectos Naturais de Moçambique </h3> <h4> Um Olhar Geoespacial </h4> Moçambique é um país de grande riqueza natural, com uma diversidade geográfica impressionante que vai desde planaltos elevados até vastas bacias costeiras. <p> Para representar essa complexidade de forma clara e acessível, elaborei este mapa topográfico dos aspectos naturais de Moçambique , utilizando dados de elevação do Copernicus DEM , informações hidrológicas do HydroSHEDS e limites administrativos de fontes confiáveis ​​como GADM e CENACARTA. <p> Para representar essa complexidade de forma clara e acessível, elaborei este mapa topográfico dos aspectos naturais de Moçambique , utilizando dados de elevação do Copernicus DEM , informações hidrológicas do HydroSHEDS e limites administrativos de fontes confiáveis ​​como GADM e CENACARTA.Para representar essa complexidade de forma clara e acessível, elaborei este mapa topográfico dos aspectos naturais de Moçambique , utilizando dados de elevação do Copernicus DEM , informações hidrológicas do HydroSHEDS e limites administrativos de fontes confiáveis ​​como GADM e CENACARTA. <p> O mapa evidencia a distribuição dos principais rios, lagos, áreas de conservação e os principais acidentes geográficos do país.", 
-    image: "Topografia.png", pdf: "Topografia.pdf" },
-
-    { id: 8, title: " Cordilheira de Chimanimani ", description: " <h3>Mapa Hipsométrico da Cordilheira de Chimanimani</h3> A Cordilheira de Chimanimani é uma região montanhosa de importância ambiental e geográfica que se estende entre Moçambique e Zimbábue. <p> Este mapa foi produzido utlizando dados de Modelo Digital de Elevação (MDE) e técnicas de geoprocessamento no QGIS. Este trabalho destaca a complexidade topográfica da Cordilheira, capturando as variações de altitude em detalhes impressionantes. ", 
-    image: "Chimanimani.png", pdf: "Chimanimane final.pdf" },
-
-    { id: 9, title: " Corrupação no Continete Africano  ", description: " <h3>Índice de Percepção da Corrupação no continete Africano - 2024 </h3> A corrupção continua sendo um dos maiores desafios para o desenvolvimento sustentável no continete Africano. Utilizando dados da Transparência Internacional, elaborei este mapa que representa a percepção da corrupção em África em 2024. <p> O mapa é uma ferramenta valiosa para analisar padrões regionais e apoiar estratégias de mitigação da corrupção. ", 
-        image: "Africa_IPC_2024.png", pdf: "Africa_IPC_2024.pdf" },
-
-    { id: 10, title: " Primeira aventura em Linguagem R ", description: ' <h3>Abstenção eleitoral em linguagem R </h3> Este foi primeiro projecto utilizando a linguagem R. Para a materialização deste projecto pôs em prática técnicas obtidas ao longo do curso de análise de dados em linguagem R. <p> O R é uma ferramenta importante na análise de dados, pois permite automatizar diversas tarefas,além disso é uma linguagem de programação de código aberto e fácil manipulação. <p> O script usado na elaboração deste mapa pode ser visualizado na minha pagina do Github através do link:<a href="https://gist.github.com/Nhanenge/47a8be244d0ded0d8f42732db74f43fb" target= "_blank"> Meu GitHub </a> ', 
-    image: "Mapa_Abstencao_Eleitoral.png", pdf: "Mapa_Abstencao_Eleitoral.png" },
-
-    { id: 11, title: " Uso e cobertura do Solo em linguagem R ", description: ' <h3> Uso e cobertura do Solo em linguagem R</h3> <h4>Uso e cobertura do distrito de Memba, Nampula </h4> O segundo mapa produzido em R, destaca a dinâmica de uso e cobertura do solo no distrito de Memba. <p> Este trabalho foi realizado com os dados do <b> European Space Agency - ESA_WorldCover (2021) </b>, uma fonte indispensável para análises espaciais, que permite compreender e monitorar as mudanças no uso da terra em escala global. <p> O script usado na elaboração deste mapa pode ser visualizado na minha pagina do Github através do link: <a href="https://gist.github.com/Nhanenge/708ac3fcd151e5f94318f07831e7a6a3" target= "_blank"> Meu GitHub </a>', 
-        image: "mapa_uso_cobertura_solo_memba.png", pdf: "mapa_uso_cobertura_solo_memba.png" },
-
-    // { id: 12, title: "Projeto 12", description: "Descrição do Projeto 2", image: "caminho/para/imagem2.jpg", pdf: "caminho/para/pdf2.pdf" }
-    
-];
-
-const projectsPerPage = 8;
-let currentPage = 1;
-
-function renderProjects(page) {
-    const accordionContainer = document.getElementById("accordionProjects");
-    accordionContainer.innerHTML = "";
-    const start = (page - 1) * projectsPerPage;
-    const end = start + projectsPerPage;
-    const paginatedProjects = projects.slice(start, end);
-
-    paginatedProjects.forEach((project, index) => {
+      paginatedProjects.forEach((project, index) => {
         const projectId = `project${start + index + 1}`;
-        const accordionItem = `
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading${projectId}">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${projectId}" aria-expanded="false" aria-controls="collapse${projectId}">
-                        ${project.title}
-                    </button>
-                </h2>
-                <div id="collapse${projectId}" class="accordion-collapse collapse" aria-labelledby="heading${projectId}" data-bs-parent="#accordionProjects">
-                    <div class="accordion-body">
-                        <img src="${project.image}" alt="${project.title}" style="width: 100%; max-width: 600px;">
+        accordionContainer.innerHTML += `
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading${projectId}">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${projectId}" aria-expanded="false" aria-controls="collapse${projectId}">
+                ${project.title}
+              </button>
+            </h2>
+            <div id="collapse${projectId}" class="accordion-collapse collapse" aria-labelledby="heading${projectId}" data-bs-parent="#accordionProjects">
+              <div class="accordion-body">
+                <img src="${project.image}" alt="${project.title}" style="width: 100%; max-width: 600px;">
                         <p>${project.description}</p>
                         <a href="${project.pdf}" class="btn btn-primary" target="_blank">Baixar PDF</a>
-                    </div>
-                </div>
+              </div>
             </div>
-        `;
-        accordionContainer.innerHTML += accordionItem;
-    });
+          </div>`;
+      });
 
-    renderPaginationControls();
-}
- 
-
-function renderPaginationControls() {
-    const paginationContainer = document.getElementById("paginationControls");
-    paginationContainer.innerHTML = "";
-    const totalPages = Math.ceil(projects.length / projectsPerPage);
-
-    for (let i = 1; i <= totalPages; i++) {
-        const paginationButton = document.createElement("button");
-        paginationButton.className = "btn btn-outline-primary mx-1";
-        paginationButton.innerText = i;
-        paginationButton.onclick = () => {
-            currentPage = i;
-            renderProjects(currentPage);
-        };
-        paginationContainer.appendChild(paginationButton);
+      renderPaginationControls();
     }
-}
 
-// Inicializa a primeira página
-renderProjects(currentPage);
+    function renderPaginationControls() {
+      const pagination = document.getElementById("paginationControls");
+      pagination.innerHTML = "";
+      const totalPages = Math.ceil(projects.length / projectsPerPage);
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.className = "btn btn-outline-primary mx-1";
+        btn.innerText = i;
+        btn.onclick = () => {
+          currentPage = i;
+          renderProjects(currentPage);
+        };
+        pagination.appendChild(btn);
+      }
+    }
 
-</script>
-    </section>
+    renderProjects(currentPage);
+  </script>
 
 
     <section id="formacao">
@@ -370,6 +402,6 @@ document.getElementById("toggle-dark-mode").addEventListener("click", function (
 
     </script>
     <!-- Script do JavaScipt do Boostrap-->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
