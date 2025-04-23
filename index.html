@@ -185,7 +185,7 @@ function renderProjects(page) {
                 </h2>
                 <div id="collapse${projectId}" class="accordion-collapse collapse" aria-labelledby="heading${projectId}" data-bs-parent="#accordionProjects">
                     <div class="accordion-body">
-                        <img src="${project.image}" alt="${project.title}" style="width: 100%;  max-width: 600px;">
+                        <img src="${project.image}" alt="${project.title}" style="width: 100%; max-width: 600px;">
                         <p>${project.description}</p>
                         <a href="${project.pdf}" class="btn btn-primary" target="_blank">Baixar PDF</a>
                     </div>
@@ -197,6 +197,7 @@ function renderProjects(page) {
 
     renderPaginationControls();
 }
+ 
 
 function renderPaginationControls() {
     const paginationContainer = document.getElementById("paginationControls");
@@ -269,7 +270,7 @@ renderProjects(currentPage);
     <button id="btnTopo" onclick="voltarAoTopo()">▲ Topo</button>
    
     <footer>
-        <p>&copy; 2025 Edilson Nhanenge. ♥ Todos os direitos reservados.</p>
+        <p>&copy; 2025 Edilson Nhanenge. ❤️ Todos os direitos reservados.</p>
     </footer>
 
     <script>
